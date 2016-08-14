@@ -1,0 +1,15 @@
+<div class="archive">
+  <h1 class="page-heading">Archive</h1>
+
+  <ul class="archive-list">
+    {% for archive in site.archives %}
+    <li>
+      <span class="archive-meta">{{ archive.date | date: "%b %-d, %Y" }}</span>
+      <h2>
+        <div class="archive-link">{{ archive.title }}</div>
+      </h2>
+      <div>{{ archive.content }}</div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
