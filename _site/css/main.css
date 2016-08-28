@@ -21,6 +21,10 @@
   color: black;
   text-decoration: underline; }
 
+.archive-date {
+  margin-top: 10px;
+  margin-bottom: -5px; }
+
 .archive-link {
   color: black;
   text-decoration: underline; }
@@ -202,10 +206,13 @@
 .home {
   margin-top: 56px; }
 
+.youtube-video {
+  margin: 0 auto; }
+
 .separator {
-  border-bottom: 1px;
-  border-color: #979797;
-  width: 100%; }
+  width: 90%;
+  height: 1px;
+  border-bottom: 1px solid #979797; }
 
 .nav {
   height: 28px;

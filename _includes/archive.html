@@ -4,13 +4,11 @@
   <ul class="archive-list">
     {% for archive in site.archives %}
       <div class="archive-header">
-        <div class="archive-link">{{ archive.title }}</div>
+        <div>{{ archive.title }}</div>
       </div>
-      <iframe width="300" src="https://www.youtube-nocookie.com/embed/{{archive.youtube_url}}?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-      <div>
-        <a class="archive-link" href="{{archive.local_url}}">{{ archive.location }}</a>
-      </div>
-      <div>{{ archive.date }}</div>
+      <iframe width="300" class="youtube-video" src="https://www.youtube-nocookie.com/embed/{{archive.youtube_url}}?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      <div class="archive-date">{{ archive.date }}</div>
+      <a target="_blank" class="archive-link" href="{{archive.location_url}}">{{ archive.location }}</a>
       <div class="archive-description">{{ archive.content }}</div>
       <div class="separator"></div>
     {% endfor %}
