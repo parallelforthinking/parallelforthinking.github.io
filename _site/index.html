@@ -99,6 +99,41 @@ interact('.draggable')
     target.setAttribute('data-y', y);
   }
 
+    console.log('we out here')
+$( document ).ready(function() {
+  $('#archive').change(function(){
+    if($(this).is(':checked')){
+      $('#archive-panel').show();
+    } else {
+      $('#archive-panel').hide();
+    }
+  });
+
+  $('#information').change(function(){
+    if($(this).is(':checked')){
+      $('#information-panel').show();
+    } else {
+      $('#information-panel').hide();
+    }
+  });
+
+  $('#social-media').change(function(){
+    if($(this).is(':checked')){
+      $('#social-media-panel').show();
+    } else {
+      $('#social-media-panel').hide();
+    }
+  });
+
+  $('#contributors').change(function(){
+    if($(this).is(':checked')){
+      $('#contributors-panel').show();
+    } else {
+      $('#contributors-panel').hide();
+    }
+  });
+});
+
     jQuery(document).ready(function(){
   jQuery('.scrollbar-outer').scrollbar();
 });
@@ -113,10 +148,10 @@ interact('.draggable')
 
   <div class="nav">
   <div class="nav-buttons">
-    <input class="nav-input" type="checkbox">Archive</input>
-    <input class="nav-input" type="checkbox">Information</input>
-    <input class="nav-input" type="checkbox">Social Media Feed</input>
-    <input class="nav-input" type="checkbox">Contributors</input>
+    <input id="archive" checked=true class="nav-input" type="checkbox">Archive</input>
+    <input id="information" checked=true class="nav-input" type="checkbox">Information</input>
+    <input id="social-media" checked=true class="nav-input" type="checkbox">Social Media Feed</input>
+    <input id="contributors" checked="true "class="nav-input" type="checkbox">Contributors</input>
   </div>
 </div>
 
@@ -127,7 +162,7 @@ interact('.draggable')
   Parallel For Thinking
 </div>
 
-  <div class="resize-drag wrap information ">
+  <div id="information-panel" class="resize-drag wrap information ">
 
   <div class="window-heading">Information</div>
   <div class="scrollbar-outer information-text right">
@@ -158,7 +193,7 @@ interact('.draggable')
   </div>
 </div>
 
-  <div class="resize-drag contributors">
+  <div id="contributors-panel" class="resize-drag contributors">
 
 <div class="window-heading">Contributors</div>
 
@@ -193,7 +228,7 @@ interact('.draggable')
 </div>
 </div>
 
-    <div class="draggable social-media">
+    <div id="social-media-panel" class="draggable social-media">
   <div class="window-heading">Social Media Feed</div>
   <div class="social-media-container"> 
     <div class="facebook-iframe"> 
@@ -203,7 +238,7 @@ interact('.draggable')
   </div>
 
 
-  <div class="archives resize-drag">
+  <div id="archive-panel" class="archives resize-drag">
   <div class="window-heading">Archive</div>
 
   <ul class="archive-list">
@@ -256,7 +291,7 @@ interact('.draggable')
 </div>
  -->
 
-  <!-- <div class="archives resize-drag">
+  <!-- <div id="archive-panel" class="archives resize-drag">
   <div class="window-heading">Archive</div>
 
   <ul class="archive-list">
