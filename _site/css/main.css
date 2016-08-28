@@ -209,6 +209,11 @@
 .youtube-video {
   margin: 0 auto; }
 
+.nav {
+  color: #858585;
+  font-size: 14px;
+  text-align: center; }
+
 .pft-logo {
   width: 80px; }
 
@@ -224,6 +229,15 @@
   -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75); }
+
+.nav-input {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 5px; }
+
+.nav-buttons {
+  width: 100%;
+  padding-top: 3px; }
 
 .window-heading {
   margin-top: 5px;

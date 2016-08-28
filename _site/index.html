@@ -49,6 +49,7 @@ interact('.resize-drag')
         x = (parseFloat(target.getAttribute('data-x')) || 0),
         y = (parseFloat(target.getAttribute('data-y')) || 0);
 
+
     // update the element's style
     target.style.width  = event.rect.width + 'px';
     target.style.height = event.rect.height + 'px';
@@ -110,7 +111,15 @@ interact('.draggable')
 
   <body>
 
-    <div class="nav"> </div>
+  <div class="nav">
+  <div class="nav-buttons">
+    <input class="nav-input" type="checkbox">Archive</input>
+    <input class="nav-input" type="checkbox">Information</input>
+    <input class="nav-input" type="checkbox">Social Media Feed</input>
+    <input class="nav-input" type="checkbox">Contributors</input>
+  </div>
+</div>
+
     <div class="wrapper">
       <div class="home">
   <div class="draggable pft-header">
