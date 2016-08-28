@@ -163,7 +163,17 @@
   top: -14px; }
 
 .information-text {
-  padding: 10px; }
+  margin: 20px;
+  margin-top: 40px; }
+
+.information {
+  width: 400px;
+  height: 400px; }
+
+.window-heading {
+  margin-top: 5px;
+  text-align: center;
+  color: #858585; }
 
 .wrap {
   position: relative;
@@ -208,10 +218,6 @@ body {
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal; }
-
-.window-heading {
-  text-align: center;
-  color: #858585; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
