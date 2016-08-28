@@ -17,6 +17,34 @@
 .test {
   background: white; }
 
+.archive-link:visited {
+  color: black;
+  text-decoration: underline; }
+
+.archive-link {
+  color: black;
+  text-decoration: underline; }
+
+.archive-header {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 22px;
+  padding-top: 21px; }
+
+.archive-description {
+  padding-left: 16px;
+  padding-right: 37px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.archives {
+  width: 400px;
+  height: 600px;
+  overflow: scroll;
+  overflow-x: hidden;
+  right: 27px;
+  top: 200px; }
+
 /*************** SCROLLBAR BASE CSS ***************/
 .scroll-wrapper {
   overflow: hidden !important;
@@ -173,6 +201,11 @@
 
 .home {
   margin-top: 56px; }
+
+.separator {
+  border-bottom: 1px;
+  border-color: #979797;
+  width: 100%; }
 
 .nav {
   height: 28px;

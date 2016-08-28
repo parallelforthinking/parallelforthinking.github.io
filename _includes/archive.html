@@ -1,15 +1,18 @@
-<div class="archive">
-  <h1 class="page-heading">Archive</h1>
+<div class="archives resize-drag">
+  <div class="window-heading">Archive</div>
 
   <ul class="archive-list">
     {% for archive in site.archives %}
-    <li>
-      <span class="archive-meta">{{ archive.date | date: "%b %-d, %Y" }}</span>
-      <h2>
+      <div class="archive-header">
         <div class="archive-link">{{ archive.title }}</div>
-      </h2>
-      <div>{{ archive.content }}</div>
-    </li>
+      </div>
+      <iframe width="300" src="https://www.youtube-nocookie.com/embed/{{archive.youtube_url}}?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      <div>
+        <a class="archive-link" href="{{archive.local_url}}">{{ archive.location }}</a>
+      </div>
+      <div>{{ archive.date }}</div>
+      <div class="archive-description">{{ archive.content }}</div>
+      <div class="separator"></div>
     {% endfor %}
   </ul>
 </div>
