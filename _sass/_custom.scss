@@ -11,7 +11,15 @@
 
 .home {
   margin-top: 56px;
-  
+}
+
+.nav {
+  height: 28px;
+  width: 100%;
+  background: white;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
 }
 
 .window-heading {
