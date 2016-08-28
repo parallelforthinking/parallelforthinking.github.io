@@ -46,7 +46,7 @@
   height: 600px;
   overflow: scroll;
   overflow-x: hidden;
-  right: 27px;
+  right: 470px;
   top: 200px; }
 
 /*************** SCROLLBAR BASE CSS ***************/
@@ -201,7 +201,9 @@
 .information {
   width: 400px;
   height: 400px;
-  margin-top: 200px; }
+  margin-top: 200px;
+  left: 100px;
+  top: 21px; }
 
 .home {
   margin-top: 56px; }
@@ -233,6 +235,7 @@
 .nav-input {
   display: inline-block;
   margin-left: 50px;
+  margin-right: 10px;
   padding-top: 5px; }
 
 .nav-buttons {
