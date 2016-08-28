@@ -173,7 +173,24 @@
 .window-heading {
   margin-top: 5px;
   text-align: center;
-  color: #858585; }
+  color: #858585;
+  padding-bottom: 7px;
+  padding-top: 3px; }
+
+.social-media {
+  right: 154px;
+  /* overflow: scroll; */
+  /* overflow-x: hidden; */
+  /* min-height: 200px; */ }
+
+.social-media-container {
+  overflow: hidden;
+  padding-top: 25px;
+  height: 406px; }
+
+.facebook-iframe {
+  position: relative;
+  top: -93px; }
 
 .wrap {
   overflow: scroll;
