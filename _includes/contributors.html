@@ -1,0 +1,24 @@
+<div class="resize-drag contributors">
+
+<div class="window-heading">Contributors</div>
+
+<div class="contributor-table">
+  <table>
+    <thead>
+      <tr>
+        <th class="contributor-heading">Name</th>
+        <th class="contributor-heading">Involvement</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for contributor in site.contributors %}
+      <tr>
+        <td><a class="contributor-link" target="_blank" url="{{contributor.url}}">{{contributor.name}}</a></td>
+        <td>{{contributor.involvement}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+</div>

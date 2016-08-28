@@ -52,6 +52,40 @@
   font-size: 30px;
 }
 
+.contributors {
+  width: 400px;
+  top: 600px;
+  left: 500px;
+}
+
+.contributor-table {
+  padding: 20px;
+  
+}
+.contributor-link {
+  text-decoration: underline;
+}
+
+.contributor-heading{
+  text-align: left;
+  font-weight: normal;
+}
+table {
+  border-collapse:collapse;
+  width: 100%;
+}
+
+thead {
+  border-bottom:1px solid black!important;
+}
+
+tbody:before {
+    content: "-";
+    display: block;
+    line-height: 20px;
+    color: transparent;
+}
+
 .social-media {
   right: 154px;
   /* overflow: scroll; */
@@ -82,6 +116,7 @@
     clear: both;
 }
 
+ 
 .right {
     position: absolute;
     top: 0;

@@ -1,7 +1,7 @@
 ---
 layout: archive
 title:  "Pre-launch Event: An Event in Exchanges"
-date:   "02.08.2016 12:00"
+date:   2016-07-03 18:42:39 +1000
 categories: about
 youtube_url: "FEhMR0U6oz8"
 location: "Melbourne School Of Design"
