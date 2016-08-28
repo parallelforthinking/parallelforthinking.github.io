@@ -1,11 +1,19 @@
 .resize-drag {
-  border: 1px solid black;
   background: white;
-  padding: 20px;
-  margin: 30px 20px;
   /* This makes things *much* easier */
-  box-sizing: border-box; }
+  font-size: 14px;
+  color: black;
+  letter-spacing: 0px;
+  line-height: 25.5px;
+  font-family: Roboto-Regular;
+  border-radius: 2px;
+  box-sizing: border-box;
+  position: absolute;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75); }
 
+/* Rectangle 9: */
 /**
  * Reset some basic elements
  */
@@ -19,9 +27,9 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 20px/1.5 "Times New Roman";
+  font: 400 20px/1.5 Roboto-Regular;
   color: #111;
-  background-color: grey;
+  background-color: #E9EBEE;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -182,7 +190,7 @@ pre {
       position: absolute;
       top: 9px;
       right: 15px;
-      background-color: grey;
+      background-color: #E9EBEE;
       border-radius: 5px;
       text-align: right; }
       .site-nav .menu-icon {

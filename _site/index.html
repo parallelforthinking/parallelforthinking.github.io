@@ -56,7 +56,7 @@ interact('.resize-drag')
     if (event.rect.width> 200) {
       target.style.width  = event.rect.width + 'px';
     }
-    console.log(event.rect.width)
+    // console.log(event.rect.width)
     x += event.deltaRect.left;
     y += event.deltaRect.top;
 
@@ -72,9 +72,17 @@ interact('.resize-drag')
   <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml">
 </head>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1660150024250174";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script> 
 
   <body>
-
     <header class="site-header">
 </header>
 
@@ -89,27 +97,27 @@ interact('.resize-drag')
   <p>
     Over the next six months, our residency in the Nicholas Building in Melbourne’s CBD will generate, collate and archive content physically and digitally, through events including discussions, exhibitions, workshops and screenings, all of which will be live-streamed directly to the Parallel Website For Thinking.
   </p>
-  <div>
-    <div class="information__sub-heading">Contact</div>
-    <div class="information__email">info@pft.website</div>
-  </div>
-  <div>
-    <div class="information__sub-heading">Social Networks</div>
-    <div class="information__social-media">Facebook</div>
-    <div class="information__social-media">Twitter</div>
-    <div class="information__social-media">Instagram</div>
-  </div>
-  <div>
-    <div class="information__sub-heading">Newsletter</div>
-    <div class="information__newsletter-info">
-      To subscribe to our newsletter please enter your email address below:
-    </div>
-    <input class="information__newsletter-input">
-    </input>
-  </div>
+  <!-- <div> -->
+  <!-- <div class="information__sub-heading">Contact</div> -->
+  <!-- <div class="information__email">info@pft.website</div> -->
+  <!-- </div> -->
+  <!-- <div> -->
+  <!-- <div class="information__sub-heading">Social Networks</div> -->
+  <!-- <div class="information__social-media">Facebook</div> -->
+  <!-- <div class="information__social-media">Twitter</div> -->
+  <!-- <div class="information__social-media">Instagram</div> -->
+  <!-- </div> -->
+  <!-- <div> -->
+  <!-- <div class="information__sub-heading">Newsletter</div> -->
+  <!-- <div class="information__newsletter-info"> -->
+  <!-- To subscribe to our newsletter please enter your email address below: -->
+  <!-- </div> -->
+  <!-- <input class="information__newsletter-input"> -->
+  <!-- </input> -->
+  <!-- </div> -->
 </div>
 
-  <div class="events resize-drag">
+  <!-- <div class="events resize-drag">
   <h1 class="page-heading">Events</h1>
 
   <ul class="event-list">
@@ -132,8 +140,9 @@ interact('.resize-drag')
     
   </ul>
 </div>
+ -->
 
-  <div class="archive">
+  <!-- <div class="archive">
   <h1 class="page-heading">Archive</h1>
 
   <ul class="archive-list">
@@ -158,12 +167,12 @@ interact('.resize-drag')
     
   </ul>
 </div>
-
-  <div class="resize-drag">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLBileoQE-4PQSEl-yL-oeyxSD74Lyh7f_" frameborder="0" allowfullscreen></iframe>  </div>
-  <div class="resize-drag">
-<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FParallelForThinking%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1660150024250174" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-  </div>
+ -->
+  <!-- <div class="resize-drag"> -->
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLBileoQE-4PQSEl-yL-oeyxSD74Lyh7f_" frameborder="0" allowfullscreen></iframe>  </div> -->
+  <!-- <div class="resize-drag"> -->
+    <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FParallelForThinking&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1660150024250174" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> -->
+  <!-- </div> -->
 </div>
 
     </div>

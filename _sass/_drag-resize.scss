@@ -1,8 +1,16 @@
 .resize-drag {
-  border: 1px solid black;
   background: white;
-  padding: 20px;
-  margin: 30px 20px;
   /* This makes things *much* easier */
+
+  font-size: 14px;
+  color: black;
+  letter-spacing: 0px;
+  line-height: 25.5px;
+  font-family: Roboto-Regular;
+  border-radius: 2px;
   box-sizing: border-box;
-}
+  position:absolute;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+}/* Rectangle 9: */

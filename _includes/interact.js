@@ -40,7 +40,7 @@ interact('.resize-drag')
     if (event.rect.width> 200) {
       target.style.width  = event.rect.width + 'px';
     }
-    console.log(event.rect.width)
+    // console.log(event.rect.width)
     x += event.deltaRect.left;
     y += event.deltaRect.top;
 
