@@ -23,8 +23,8 @@ interact('.resize-drag')
     onmove: window.dragMoveListener
   })
   .resizable({
-    preserveAspectRatio: true,
-    edges: { left: true, right: true, bottom: true, top: true }
+    preserveAspectRatio: false,
+    edges: { left: true, right: false, bottom: true, top: true }
   })
   .on('resizemove', function (event) {
     var target = event.target,
@@ -32,15 +32,10 @@ interact('.resize-drag')
         y = (parseFloat(target.getAttribute('data-y')) || 0);
 
     // update the element's style
-
     target.style.width  = event.rect.width + 'px';
-    // target.style.height = event.rect.height + 'px';
+    target.style.height = event.rect.height + 'px';
 
     // translate when resizing from top or left edges
-    if (event.rect.width> 200) {
-      target.style.width  = event.rect.width + 'px';
-    }
-    // console.log(event.rect.width)
     x += event.deltaRect.left;
     y += event.deltaRect.top;
 
@@ -49,5 +44,4 @@ interact('.resize-drag')
 
     target.setAttribute('data-x', x);
     target.setAttribute('data-y', y);
-    // target.textContent = Math.round(event.rect.width) + '×' + Math.round(event.rect.height);
   });

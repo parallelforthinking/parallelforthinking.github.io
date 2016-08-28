@@ -1,0 +1,28 @@
+.information-text {
+  padding: 10px;
+}
+
+.wrap {
+    position: relative;
+    overflow: scroll;
+    overflow-x: hidden;
+    min-height: 200px;
+}
+
+.wrap::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.right ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
