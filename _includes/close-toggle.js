@@ -18,5 +18,9 @@ $(document).ready(function() {
       $("#social-media-panel").hide();
       $('#social-media').prop('checked', false);
     }
+    else if (id == "events-close") {
+      $("#events-panel").hide();
+      $('#events').prop('checked', false);
+    }
   });
 });

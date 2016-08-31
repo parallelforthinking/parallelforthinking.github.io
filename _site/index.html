@@ -152,6 +152,10 @@ $( document ).ready(function() {
       $("#social-media-panel").hide();
       $('#social-media').prop('checked', false);
     }
+    else if (id == "events-close") {
+      $("#events-panel").hide();
+      $('#events').prop('checked', false);
+    }
   });
 });
 
@@ -188,7 +192,7 @@ $( document ).ready(function() {
 
   <div id="information-panel" class="resize-drag information ">
 
-  <div class="close-button"> x </div>
+  <div id="information-close" class="close-button"> x </div>
   <div class="window-heading">Information</div>
   <div class="resize-drag-inner information-inner scrollbar-inner">
     <div class="information-text">
@@ -602,7 +606,7 @@ $( document ).ready(function() {
 </div>
 
     <div id="social-media-panel" class="draggable social-media">
-  <div class="close-button"> x </div>
+  <div id="social-media-close" class="close-button"> x </div>
   <div class="window-heading">Social Media Feed</div>
   <div class="social-media-container"> 
     <div class="facebook-iframe"> 
@@ -644,7 +648,7 @@ $( document ).ready(function() {
 </div>
 
   <div id="events-panel" class="events white-box draggable">
-  <div class="close-button"> x </div>
+  <div id="events-close" class="close-button"> x </div>
   <div class="window-heading">Events</div>
   <div class="events-text">
     Coming Soon ...
