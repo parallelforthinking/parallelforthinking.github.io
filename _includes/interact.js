@@ -1,26 +1,10 @@
-// require('index.js')
-function dragResizeMoveListener (event) {
-  var target = event.target,
-      // keep the dragged position in the data-x/data-y attributes
-      x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-      y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-
-  // translate the element
-  target.style.webkitTransform =
-    target.style.transform =
-    'translate(' + x + 'px, ' + y + 'px)';
-
-  // update the posiion attributes
-  target.setAttribute('data-x', x);
-  target.setAttribute('data-y', y);
-}
-
+var zIndex = 0;
 // this is used later in the resizing and gesture demos
-window.dragResizeMoveListener = dragResizeMoveListener;
+window.dragMoveListener = dragMoveListener;
 
 interact('.resize-drag')
   .draggable({
-    onmove: window.dragResizeMoveListener
+    onmove: window.dragMoveListener
   })
   .resizable({
     preserveAspectRatio: false,
@@ -44,7 +28,6 @@ interact('.resize-drag')
     // translate when resizing from top or left edges
     x += event.deltaRect.left;
     y += event.deltaRect.top;
-
     target.style.webkitTransform = target.style.transform =
       'translate(' + x + 'px,' + y + 'px)';
 
@@ -62,7 +45,6 @@ interact('.draggable')
     // call this function on every dragend event
     onend: function (event) {
       var textEl = event.target.querySelector('p');
-
       textEl && (textEl.textContent =
         'moved a distance of '
         + (Math.sqrt(event.dx * event.dx +
@@ -75,6 +57,9 @@ interact('.draggable')
         // keep the dragged position in the data-x/data-y attributes
         x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
         y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    zIndex++;
+    target.style.zIndex = zIndex;
 
     // translate the element
     target.style.webkitTransform =
