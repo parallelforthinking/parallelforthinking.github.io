@@ -54,6 +54,7 @@
 }
 
 .pft-header {
+  z-index: 10;
   font-size: 30px;
   padding-top: 5px;
   padding-bottom: 0;
@@ -63,9 +64,10 @@
 }
 
 .contributors {
-  width: 400px;
+  z-index: -1;
+  top: 400px!important;
+  left: 33%;
   top: 600px;
-  left: 500px;
 }
 
 .contributor-table {
@@ -97,7 +99,8 @@ tbody:before {
 }
 
 .social-media {
-  right: 154px;
+    right: 8%;
+    margin-top: 27px;
   /* overflow: scroll; */
   /* overflow-x: hidden; */
   /* min-height: 200px; */

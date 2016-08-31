@@ -329,7 +329,7 @@
   width: 400px;
   height: 400px;
   margin-top: 200px;
-  left: 100px;
+  left: 4%;
   top: 21px;
   min-height: 200px; }
 
@@ -369,8 +369,8 @@
 .archives {
   width: 400px;
   height: 600px;
-  right: 470px;
-  top: 200px; }
+  right: 23%;
+  top: 192px; }
 
 .archives-inner {
   overflow: scroll;
@@ -557,6 +557,7 @@
   padding-top: 3px; }
 
 .pft-header {
+  z-index: 10;
   font-size: 30px;
   padding-top: 5px;
   padding-bottom: 0;
@@ -565,9 +566,10 @@
   font-size: 30px; }
 
 .contributors {
-  width: 400px;
-  top: 600px;
-  left: 500px; }
+  z-index: -1;
+  top: 400px !important;
+  left: 33%;
+  top: 600px; }
 
 .contributor-table {
   padding: 20px; }
@@ -593,7 +595,8 @@ tbody:before {
   color: transparent; }
 
 .social-media {
-  right: 154px;
+  right: 8%;
+  margin-top: 27px;
   /* overflow: scroll; */
   /* overflow-x: hidden; */
   /* min-height: 200px; */ }
