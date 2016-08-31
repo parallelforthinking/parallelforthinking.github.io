@@ -24,25 +24,33 @@
   border-bottom:1px solid #979797;
 }
 
-.nav {
-  height: 28px;
-  width: 100%;
+.nav-container {
+  height: 32px;
   background: white;
   -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
   box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+  width: 100%;
+}
+
+.nav {
+  max-width: 700px ;
+  margin: 0 auto;
+  padding-top: 1px;
+  text-align: justify;
+}
+.nav:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.nav input {
+    display: inline-block;
 }
 
 .nav-input {
   display: inline-block;
-  margin-left: 50px;
-  margin-right: 10px;
   padding-top: 5px;
-}
-
-.nav-buttons {
-  width: 100%;
-  padding-top: 3px;
 }
 
 .window-heading {
