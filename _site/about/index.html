@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/about/">
+  <link rel="alternate" type="application/rss+xml" title="Parallel For Thinking" href="/feed.xml">
 <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.6/interact.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.10/jquery.scrollbar.js"></script>
@@ -122,6 +123,13 @@ $( document ).ready(function() {
       $('#contributors-panel').hide();
     }
   });
+  $('#live-stream').change(function(){
+    if($(this).is(':checked')){
+      $('#live-stream-panel').show();
+    } else {
+      $('#live-stream-panel').hide();
+    }
+  });
 
   $('#events').change(function(){
     if($(this).is(':checked')){
@@ -156,6 +164,10 @@ $( document ).ready(function() {
       $("#events-panel").hide();
       $('#events').prop('checked', false);
     }
+    else if (id == "live-stream-close") {
+      $("#live-stream-panel").hide();
+      $('#live-stream').prop('checked', false);
+    }
   });
 });
 
@@ -164,7 +176,6 @@ $( document ).ready(function() {
 });
 
   </script>
-  <link rel="alternate" type="application/rss+xml" title="Parallel For Thinking" href="/feed.xml">
 </head>
 
 <div id="fb-root"></div>
@@ -179,6 +190,7 @@ $( document ).ready(function() {
     <div class="nav-input"> <input id="social-media" checked=true  type="checkbox">Social Media Feed</input></div>
     <div class="nav-input"> <input id="contributors" checked="true "class="nav-input" type="checkbox">Contributors</input></div>
     <div class="nav-input"> <input id="events" "class="nav-input" type="checkbox">Events</input></div>
+    <div class="nav-input"> <input id="live-stream" "class="nav-input"  checked="true" type="checkbox">Live Stream</input></div>
   </div>
 
 </div>

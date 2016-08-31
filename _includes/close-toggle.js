@@ -22,5 +22,9 @@ $(document).ready(function() {
       $("#events-panel").hide();
       $('#events').prop('checked', false);
     }
+    else if (id == "live-stream-close") {
+      $("#live-stream-panel").hide();
+      $('#live-stream').prop('checked', false);
+    }
   });
 });

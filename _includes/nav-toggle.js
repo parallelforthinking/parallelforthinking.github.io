@@ -31,6 +31,13 @@ $( document ).ready(function() {
       $('#contributors-panel').hide();
     }
   });
+  $('#live-stream').change(function(){
+    if($(this).is(':checked')){
+      $('#live-stream-panel').show();
+    } else {
+      $('#live-stream-panel').hide();
+    }
+  });
 
   $('#events').change(function(){
     if($(this).is(':checked')){
