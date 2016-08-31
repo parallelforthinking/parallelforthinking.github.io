@@ -1,5 +1,5 @@
 ---
 name: "Transitions Magazine"
 link_url: "http://trove.nla.gov.au/work/11311564?selectedversion=NBD943676"
-involvement:  "http://trove.nla.gov.au/work/11311564?selectedversion=NBD943676"
+involvement:  ""
 ---
