@@ -584,6 +584,16 @@ tbody:before {
   top: 7px;
   left: 14px; }
 
+.credits {
+  position: fixed;
+  font-size: 10px;
+  bottom: 0;
+  right: 0;
+  color: black; }
+  .credits a {
+    color: black;
+    text-decoration: underline; }
+
 .live-stream {
   height: 355px;
   top: 160px;
