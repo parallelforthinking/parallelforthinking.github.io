@@ -319,8 +319,10 @@ tbody:before {
   padding-left: 7px; }
 
 .mobile-pft-logo {
-  width: 39px;
-  margin-left: 3px; }
+  width: 28px;
+  margin: 7px;
+  margin-bottom: 9px;
+  margin-left: 4px; }
 
 .white-box {
   border-radius: 2px;
@@ -574,7 +576,8 @@ tbody:before {
   text-align: center; }
 
 .pft-logo {
-  width: 80px; }
+  width: 46px;
+  margin: 11px; }
 
 .separator {
   width: 90%;
