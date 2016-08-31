@@ -38,6 +38,13 @@ $( document ).ready(function() {
       $('#live-stream-panel').hide();
     }
   });
+  $('#branding').change(function(){
+    if($(this).is(':checked')){
+      $('#branding-panel').show();
+    } else {
+      $('#branding-panel').hide();
+    }
+  });
 
   $('#events').change(function(){
     if($(this).is(':checked')){

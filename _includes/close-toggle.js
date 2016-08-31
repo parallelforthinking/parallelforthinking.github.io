@@ -26,5 +26,9 @@ $(document).ready(function() {
       $("#live-stream-panel").hide();
       $('#live-stream').prop('checked', false);
     }
+    else if (id == "branding-close") {
+      $("#branding-panel").hide();
+      $('#branding').prop('checked', false);
+    }
   });
 });
