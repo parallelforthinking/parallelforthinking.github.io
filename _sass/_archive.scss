@@ -30,11 +30,12 @@
 .archives {
   width: 400px;
   height: 600px;
-  overflow: scroll;
-  overflow-x: hidden;
   right: 470px;
   top: 200px;
 }
 
-.archive-list {
+.archives-inner {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 560px;
 }

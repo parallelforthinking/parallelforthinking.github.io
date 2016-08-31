@@ -49,10 +49,15 @@ interact('.resize-drag')
         x = (parseFloat(target.getAttribute('data-x')) || 0),
         y = (parseFloat(target.getAttribute('data-y')) || 0);
 
-
     // update the element's style
     target.style.width  = event.rect.width + 'px';
     target.style.height = event.rect.height + 'px';
+
+    var innerHeight = (event.rect.height - 40)+ 'px';
+    var width = event.rect.width + 'px';
+
+    $(target).children(".resize-drag-inner").height(innerHeight)
+    $(target).children(".resize-drag-inner").width(width)
 
     // translate when resizing from top or left edges
     x += event.deltaRect.left;
@@ -135,7 +140,7 @@ $( document ).ready(function() {
 });
 
     jQuery(document).ready(function(){
-  jQuery('.scrollbar-outer').scrollbar();
+  jQuery('.scrollbar-inner').scrollbar();
 });
 
   </script>
@@ -238,11 +243,12 @@ $( document ).ready(function() {
   </div>
 
 
-  <div id="archive-panel" class="archives resize-drag">
+  <div id="archive-panel" class="archives resize-drag ">
   <div class="window-heading">Archive</div>
 
-  <ul class="archive-list">
-    
+  <div class="archives-inner resize-drag-inner scrollbar-inner">
+    <ul class="archive-list">
+      
       <div class="archive-header">
         <div>Pre-launch Event: An Event in Exchanges</div>
       </div>
@@ -252,7 +258,7 @@ $( document ).ready(function() {
       <div class="archive-description"><p>We intend to create a space that is a catalyst for a new culture committed sharing ideas and discussion across the world; providing access to material and ideas previously limited to small groups of people, eliminating a minority like effect typically associated with thinking.</p>
 </div>
       <div class="separator"></div>
-    
+      
       <div class="archive-header">
         <div>Another Event: An Event in Exchanges</div>
       </div>
@@ -262,8 +268,9 @@ $( document ).ready(function() {
       <div class="archive-description"><p>We intend to create a space that is a catalyst for a new culture committed sharing ideas and discussion across the world; providing access to material and ideas previously limited to small groups of people, eliminating a minority like effect typically associated with thinking.</p>
 </div>
       <div class="separator"></div>
-    
-  </ul>
+      
+    </ul>
+  </div>
 </div>
 
   <!-- <div class="events resize-drag">
@@ -291,11 +298,12 @@ $( document ).ready(function() {
 </div>
  -->
 
-  <!-- <div id="archive-panel" class="archives resize-drag">
+  <!-- <div id="archive-panel" class="archives resize-drag ">
   <div class="window-heading">Archive</div>
 
-  <ul class="archive-list">
-    
+  <div class="archives-inner resize-drag-inner scrollbar-inner">
+    <ul class="archive-list">
+      
       <div class="archive-header">
         <div>Pre-launch Event: An Event in Exchanges</div>
       </div>
@@ -305,7 +313,7 @@ $( document ).ready(function() {
       <div class="archive-description"><p>We intend to create a space that is a catalyst for a new culture committed sharing ideas and discussion across the world; providing access to material and ideas previously limited to small groups of people, eliminating a minority like effect typically associated with thinking.</p>
 </div>
       <div class="separator"></div>
-    
+      
       <div class="archive-header">
         <div>Another Event: An Event in Exchanges</div>
       </div>
@@ -315,8 +323,9 @@ $( document ).ready(function() {
       <div class="archive-description"><p>We intend to create a space that is a catalyst for a new culture committed sharing ideas and discussion across the world; providing access to material and ideas previously limited to small groups of people, eliminating a minority like effect typically associated with thinking.</p>
 </div>
       <div class="separator"></div>
-    
-  </ul>
+      
+    </ul>
+  </div>
 </div>
  -->
   <!-- <div class="resize-drag"> -->

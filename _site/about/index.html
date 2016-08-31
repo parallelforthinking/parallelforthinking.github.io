@@ -49,10 +49,15 @@ interact('.resize-drag')
         x = (parseFloat(target.getAttribute('data-x')) || 0),
         y = (parseFloat(target.getAttribute('data-y')) || 0);
 
-
     // update the element's style
     target.style.width  = event.rect.width + 'px';
     target.style.height = event.rect.height + 'px';
+
+    var innerHeight = (event.rect.height - 40)+ 'px';
+    var width = event.rect.width + 'px';
+
+    $(target).children(".resize-drag-inner").height(innerHeight)
+    $(target).children(".resize-drag-inner").width(width)
 
     // translate when resizing from top or left edges
     x += event.deltaRect.left;
@@ -135,7 +140,7 @@ $( document ).ready(function() {
 });
 
     jQuery(document).ready(function(){
-  jQuery('.scrollbar-outer').scrollbar();
+  jQuery('.scrollbar-inner').scrollbar();
 });
 
   </script>

@@ -1,8 +1,9 @@
-<div id="archive-panel" class="archives resize-drag">
+<div id="archive-panel" class="archives resize-drag ">
   <div class="window-heading">Archive</div>
 
-  <ul class="archive-list">
-    {% for archive in site.archives %}
+  <div class="archives-inner resize-drag-inner scrollbar-inner">
+    <ul class="archive-list">
+      {% for archive in site.archives %}
       <div class="archive-header">
         <div>{{ archive.title }}</div>
       </div>
@@ -11,6 +12,7 @@
       <a target="_blank" class="archive-link" href="{{archive.location_url}}">{{ archive.location }}</a>
       <div class="archive-description">{{ archive.content }}</div>
       <div class="separator"></div>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
