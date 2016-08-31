@@ -6,11 +6,15 @@
 
   <body>
 
-  {% include nav.html %}
-    <div class="wrapper">
-      {{ content }}
+    <div class="hidden-sm hidden-xs">
+      {% include nav.html %}
+      <div class="wrapper">
+        {{ content }}
+      </div>
+      {% include footer.html %}
     </div>
-    {% include footer.html %}
+
+    {% include mobile_website.html %}
 
   </body>
 
