@@ -1,0 +1,5 @@
+---
+name: "Collège international de philosophie"
+link_url: "https://en.wikipedia.org/wiki/Coll%C3%A8ge_international_de_philosophie"
+involvement:  "Significant Historical Precedent"
+---

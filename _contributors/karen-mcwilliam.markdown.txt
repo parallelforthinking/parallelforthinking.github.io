@@ -1,0 +1,5 @@
+---
+name: "Karen McWilliam"
+link_url: "http://elenbergfraser.com/#!/staff/karen-mcwilliam"
+involvement:  "Major Supporter"
+---

@@ -1,0 +1,5 @@
+---
+name: "Serena Bentley"
+link_url: "https://www.ngv.vic.gov.au/author/sbentley/"
+involvement:  "Guest Speaker"
+---

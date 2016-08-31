@@ -1,0 +1,5 @@
+---
+name: "De Stijl"
+link_url: "https://en.wikipedia.org/wiki/De_Stijl"
+involvement:  "Significant Historical Precedent"
+---

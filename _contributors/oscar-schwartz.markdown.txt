@@ -1,0 +1,5 @@
+---
+name: "Oscar Schwartz"
+link_url: "http://oscarschwartz.me/"
+involvement:  "Guest Speaker"
+---

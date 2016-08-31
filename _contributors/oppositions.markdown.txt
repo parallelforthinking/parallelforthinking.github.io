@@ -1,0 +1,5 @@
+---
+name: "Oppositions"
+link_url: "https://en.wikipedia.org/wiki/Oppositions"
+involvement:  "Significant Historical Precedent"
+---

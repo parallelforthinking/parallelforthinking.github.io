@@ -1,0 +1,5 @@
+---
+name: "Aaron Schwartz"
+link_url: "https://en.wikipedia.org/wiki/Aaron_Swartz"
+involvement:  "Significant Historical Mentor"
+---

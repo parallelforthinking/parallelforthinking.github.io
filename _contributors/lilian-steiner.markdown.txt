@@ -1,0 +1,5 @@
+---
+name: "Lilian Steiner"
+link_url: "http://www.lucyguerininc.com/performer/lilian-steiner/"
+involvement:  "Guest Speaker"
+---

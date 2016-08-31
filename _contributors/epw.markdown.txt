@@ -1,0 +1,5 @@
+---
+name: "EPW (experimental Painting Workshop)"
+link_url: "https://www.accaonline.org.au/sites/default/files/John%20Nixon%20Thesis%20screen.pdf"
+involvement:  "Significant Historical Precedent"
+---

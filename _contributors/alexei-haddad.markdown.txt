@@ -1,4 +1,5 @@
 ---
 name: "Alexei Haddad"
+link_url: ""
 involvement:  "Event Contributor"
 ---

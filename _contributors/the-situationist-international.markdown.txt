@@ -1,0 +1,5 @@
+---
+name: "The Situationist International"
+link_url: "https://en.wikipedia.org/wiki/Situationist_International"
+involvement:  "Significant Historical Precedent"
+---

@@ -1,0 +1,5 @@
+---
+name: "Donald Bates"
+link_url: "https://msd.unimelb.edu.au/people/donald-bates"
+involvement:  "Mentor / Guest Speaker"
+---

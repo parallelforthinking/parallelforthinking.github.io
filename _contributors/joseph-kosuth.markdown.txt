@@ -1,0 +1,5 @@
+---
+name: "Joseph Kosuth"
+link_url: "https://en.wikipedia.org/wiki/Joseph_Kosuth"
+involvement:  "Significant Historical Mentor"
+---

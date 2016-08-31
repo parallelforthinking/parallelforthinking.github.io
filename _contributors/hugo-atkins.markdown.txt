@@ -1,0 +1,5 @@
+---
+name: "Hugo Atkins"
+link_url: "http://magicjohnston.com/"
+involvement:  "Guest Speaker"
+---

@@ -1,0 +1,5 @@
+---
+name: "Midori Hasuike"
+link_url: "http://www.midorihasuike.com/"
+involvement:  "Event Contributor"
+---

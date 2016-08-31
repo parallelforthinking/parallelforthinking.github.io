@@ -1,0 +1,5 @@
+---
+name: "Peter Eisenman"
+link_url: "http://www.eisenmanarchitects.com/firm-profile.html#eisenman"
+involvement:  "Significant Historical Mentor"
+---

@@ -1,0 +1,5 @@
+---
+name: "Ari Seligmann"
+link_url: "http://www.artdes.monash.edu.au/people/ari-seligmann.html"
+involvement:  "Mentor / Guest Speaker"
+---

@@ -1,0 +1,5 @@
+---
+name: "Elizabeth Diller"
+link_url: "https://en.wikipedia.org/wiki/Diller_Scofidio_%2B_Renfro"
+involvement:  "Significant Historical Mentor"
+---

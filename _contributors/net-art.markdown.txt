@@ -1,0 +1,5 @@
+---
+name: "Net.Art"
+link_url: "https://en.wikipedia.org/wiki/Net.art"
+involvement:  "Significant Historical Precedent"
+---

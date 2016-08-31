@@ -1,0 +1,5 @@
+---
+name: "Ryoji Suzuki"
+link_url: "http://www.ryoji.co.jp/"
+involvement:  "Guest Speaker"
+---

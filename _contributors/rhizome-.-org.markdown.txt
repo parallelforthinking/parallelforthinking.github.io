@@ -1,0 +1,5 @@
+---
+name: "Rhizome.org"
+link_url: "http://rhizome.org/"
+involvement:  "Significant Historical Precedent"
+---

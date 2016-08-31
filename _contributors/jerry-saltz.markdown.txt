@@ -1,0 +1,5 @@
+---
+name: "Jerry Saltz"
+link_url: "http://nymag.com/author/Jerry%20Saltz/"
+involvement:  "Social Media Interaction"
+---

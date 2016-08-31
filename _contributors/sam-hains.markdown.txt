@@ -1,5 +1,5 @@
 ---
 name: "Sam Hains"
-url: "samhains.com"
+link_url: "http://samhains.com/"
 involvement:  "Digital Space Coordinator"
 ---

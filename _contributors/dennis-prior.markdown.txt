@@ -1,0 +1,5 @@
+---
+name: "Dennis Prior"
+link_url: "http://aprioriandafter.com.au/"
+involvement:  "Guest Speaker"
+---

@@ -13,7 +13,7 @@
     <tbody>
       {% for contributor in site.contributors %}
       <tr>
-        <td><a class="contributor-link" target="_blank" url="{{contributor.url}}">{{contributor.name}}</a></td>
+        <td><a class="contributor-link" target="_blank" href="{{contributor.link_url}}">{{contributor.name}}</a></td>
         <td>{{contributor.involvement}}</td>
       </tr>
       {% endfor %}

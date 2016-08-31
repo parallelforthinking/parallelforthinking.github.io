@@ -1,0 +1,5 @@
+---
+name: "Rem Koolhaas"
+link_url: "http://oma.eu/partners/rem-koolhaas"
+involvement:  "Significant Historical Mentor"
+---

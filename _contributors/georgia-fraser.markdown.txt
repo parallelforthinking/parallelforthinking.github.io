@@ -1,0 +1,5 @@
+---
+name: "Georgia Fraser"
+link_url: "https://i-d.vice.com/en_au/article/designers-ru-kwok-and-georgia-fraser-are-best-friends-who-will-sacrifice-anything-to-get-it-right"
+involvement:  "Guest Speaker"
+---

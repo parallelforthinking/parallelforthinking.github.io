@@ -1,0 +1,5 @@
+---
+name: "E.A.T"
+link_url: "https://en.wikipedia.org/wiki/Experiments_in_Art_and_Technology"
+involvement:  "Significant Historical Precedent"
+---
