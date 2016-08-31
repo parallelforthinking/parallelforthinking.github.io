@@ -1,0 +1,24 @@
+.information-text {
+  /* margin: 20px; */
+  padding: 20px;
+}
+
+.information {
+  width: 400px;
+  height: 400px;
+  margin-top: 200px;
+  left: 100px;
+  top: 21px;
+  min-height: 200px;
+}
+
+.information-inner {
+  
+  height: 360px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-top: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
