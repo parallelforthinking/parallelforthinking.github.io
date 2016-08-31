@@ -31,9 +31,8 @@
 
 .contributors {
   z-index: -1;
-  top: 400px !important;
+  top: 306px;
   left: 33%;
-  top: 600px;
   height: 340px;
   width: 350px; }
 
@@ -420,14 +419,14 @@ tbody:before {
 
 .archives {
   width: 400px;
-  height: 600px;
+  height: 420px;
   right: 23%;
   top: 192px; }
 
 .archives-inner {
   overflow: scroll;
   overflow-x: hidden;
-  height: 560px; }
+  height: 380px; }
 
 /*************** SCROLLBAR BASE CSS ***************/
 .scroll-wrapper {
@@ -587,7 +586,7 @@ tbody:before {
 
 .live-stream {
   height: 355px;
-  top: 200px;
+  top: 160px;
   left: 15%; }
 
 .separator {
