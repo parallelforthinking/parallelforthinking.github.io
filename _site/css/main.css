@@ -5,7 +5,7 @@
   color: black;
   letter-spacing: 0px;
   line-height: 25.5px;
-  font-family: Roboto-Regular;
+  font-family: 'Roboto', sans-serif;
   border-radius: 2px;
   box-sizing: border-box;
   position: absolute;
@@ -632,7 +632,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 20px/1.5 Roboto-Regular;
+  font: 400 20px/1.5 "Roboto", sans-serif;
   color: #111;
   background-color: #E9EBEE;
   -webkit-text-size-adjust: 100%;
