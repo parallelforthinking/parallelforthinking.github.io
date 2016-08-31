@@ -17,6 +17,18 @@
 .test {
   background: white; }
 
+.events {
+  width: 284px;
+  top: 200px;
+  z-index: 200;
+  display: none; }
+
+.events-text {
+  padding: 17px;
+  font-size: 32px;
+  text-align: center;
+  padding-bottom: 31px; }
+
 .contributors {
   z-index: -1;
   top: 400px !important;

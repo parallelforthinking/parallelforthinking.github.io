@@ -31,4 +31,12 @@ $( document ).ready(function() {
       $('#contributors-panel').hide();
     }
   });
+
+  $('#events').change(function(){
+    if($(this).is(':checked')){
+      $('#events-panel').show();
+    } else {
+      $('#events-panel').hide();
+    }
+  });
 });
