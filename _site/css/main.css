@@ -579,6 +579,12 @@ tbody:before {
   width: 46px;
   margin: 11px; }
 
+.close-button {
+  position: absolute;
+  cursor: pointer;
+  top: 7px;
+  left: 14px; }
+
 .separator {
   width: 90%;
   height: 1px;

@@ -132,6 +132,29 @@ $( document ).ready(function() {
   });
 });
 
+    $(document).ready(function() {
+  $(".close-button").click(function(event) {
+    var id = event.target.id;
+
+    if (id == "archive-close") {
+      $("#archive-panel").hide();
+      $('#archive').prop('checked', false);
+    }
+    else if (id== "contributors-close"){
+      $("#contributors-panel").hide();
+      $('#contributors').prop('checked', false);
+    }
+    else if (id == "information-close") {
+      $("#information-panel").hide();
+      $('#information').prop('checked', false);
+    }
+    else if (id == "social-media-close") {
+      $("#social-media-panel").hide();
+      $('#social-media').prop('checked', false);
+    }
+  });
+});
+
     jQuery(document).ready(function(){
   jQuery('.scrollbar-inner').scrollbar();
 });
@@ -165,6 +188,7 @@ $( document ).ready(function() {
 
   <div id="information-panel" class="resize-drag information ">
 
+  <div class="close-button"> x </div>
   <div class="window-heading">Information</div>
   <div class="resize-drag-inner information-inner scrollbar-inner">
     <div class="information-text">
@@ -198,6 +222,7 @@ $( document ).ready(function() {
 
   <div id="contributors-panel" class="resize-drag contributors">
 
+<div id="contributors-close" class="close-button"> x </div>
 <div class="window-heading">Contributors</div>
 
 <div class="contributor-table resize-drag-inner scrollbar-inner">
@@ -577,6 +602,7 @@ $( document ).ready(function() {
 </div>
 
     <div id="social-media-panel" class="draggable social-media">
+  <div class="close-button"> x </div>
   <div class="window-heading">Social Media Feed</div>
   <div class="social-media-container"> 
     <div class="facebook-iframe"> 
@@ -587,6 +613,7 @@ $( document ).ready(function() {
 
 
   <div id="archive-panel" class="archives resize-drag ">
+  <div id="archive-close" class="close-button"> x </div>
   <div class="window-heading">Archive</div>
 
   <div class="archives-inner resize-drag-inner scrollbar-inner">
@@ -617,6 +644,7 @@ $( document ).ready(function() {
 </div>
 
   <div id="events-panel" class="events white-box draggable">
+  <div class="close-button"> x </div>
   <div class="window-heading">Events</div>
   <div class="events-text">
     Coming Soon ...
@@ -625,6 +653,7 @@ $( document ).ready(function() {
 
 
   <!-- <div id="archive-panel" class="archives resize-drag ">
+  <div id="archive-close" class="close-button"> x </div>
   <div class="window-heading">Archive</div>
 
   <div class="archives-inner resize-drag-inner scrollbar-inner">
