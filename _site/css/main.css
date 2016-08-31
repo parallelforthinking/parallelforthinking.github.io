@@ -17,6 +17,44 @@
 .test {
   background: white; }
 
+.contributors {
+  z-index: -1;
+  top: 400px !important;
+  left: 33%;
+  top: 600px;
+  height: 340px;
+  width: 350px; }
+
+.contributor-table {
+  padding: 20px;
+  overflow-y: scroll;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  word-wrap: break-word;
+  height: 300px; }
+
+.contributor-link {
+  text-decoration: underline; }
+
+.contributor-heading {
+  text-align: left;
+  font-weight: normal; }
+
+table {
+  border-collapse: collapse;
+  width: 91%;
+  table-layout: fixed;
+  margin-left: 16px; }
+
+thead {
+  border-bottom: 1px solid black !important; }
+
+tbody:before {
+  content: "-";
+  display: block;
+  line-height: 20px;
+  color: transparent; }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -564,35 +602,6 @@
   padding-left: 10px;
   padding-right: 38px;
   font-size: 30px; }
-
-.contributors {
-  z-index: -1;
-  top: 400px !important;
-  left: 33%;
-  top: 600px; }
-
-.contributor-table {
-  padding: 20px; }
-
-.contributor-link {
-  text-decoration: underline; }
-
-.contributor-heading {
-  text-align: left;
-  font-weight: normal; }
-
-table {
-  border-collapse: collapse;
-  width: 100%; }
-
-thead {
-  border-bottom: 1px solid black !important; }
-
-tbody:before {
-  content: "-";
-  display: block;
-  line-height: 20px;
-  color: transparent; }
 
 .social-media {
   right: 8%;
