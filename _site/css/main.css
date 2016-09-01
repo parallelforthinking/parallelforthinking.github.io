@@ -382,8 +382,7 @@ tbody:before {
   height: 400px;
   margin-top: 200px;
   left: 4%;
-  top: 21px;
-  min-height: 200px; }
+  top: 21px; }
 
 .information-inner {
   height: 360px;
@@ -670,6 +669,7 @@ tbody:before {
 .social-media {
   right: 8%;
   margin-top: 27px;
+  width: 340px;
   /* overflow: scroll; */
   /* overflow-x: hidden; */
   /* min-height: 200px; */ }
