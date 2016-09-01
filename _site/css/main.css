@@ -408,6 +408,7 @@ tbody:before {
   font-size: 22px;
   font-weight: bold;
   padding-bottom: 22px;
+  line-height: 22px;
   padding-top: 21px; }
 
 .archive-description {

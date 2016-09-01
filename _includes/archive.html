@@ -6,7 +6,7 @@
 
   <div class="archives-inner resize-drag-inner scrollbar-inner">
     <ul class="archive-list">
-      {% for archive in site.archives %}
+      {% for archive in site.archives reversed %}
       <div class="archive-header">
         <div>{{ archive.title }}</div>
       </div>

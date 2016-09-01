@@ -1,6 +1,6 @@
 ---
 layout: archive
-title:  "Pre-launch Event: An Event in Exchanges"
+title:  "Pre Launch Event: An Evening for the Exchange of Thinking"
 date:   2016-02-26 19:00 - 21:00 
 categories: about
 youtube_url: "http://i36.photobucket.com/albums/e37/parallelforthinking/PRELAUNCH-SCREENSHOT_zps9o7kexyr.jpg"
