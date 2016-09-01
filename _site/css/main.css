@@ -399,8 +399,7 @@ tbody:before {
   text-decoration: underline; }
 
 .archive-date {
-  margin-top: 10px;
-  margin-bottom: -5px; }
+  margin-top: 10px; }
 
 .archive-link {
   color: black;
@@ -584,6 +583,7 @@ tbody:before {
 .close-button {
   position: absolute;
   cursor: pointer;
+  color: #858585;
   top: 7px;
   left: 14px; }
 
@@ -688,13 +688,14 @@ body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  line-height: 17px; }
 
 /**
  * Basic styling
  */
 body {
-  font: 400 20px/1.5 "Roboto", sans-serif;
+  font: 400 20px/1 "Roboto", sans-serif;
   color: #111;
   background-color: #E9EBEE;
   -webkit-text-size-adjust: 100%;
@@ -849,7 +850,7 @@ pre {
     display: none; }
   .site-nav .page-link {
     color: #111;
-    line-height: 1.5; }
+    line-height: 1; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
   @media screen and (max-width: 600px) {
