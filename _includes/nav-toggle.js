@@ -1,4 +1,3 @@
-console.log('we out here')
 $( document ).ready(function() {
   $('#archive').change(function(){
     if($(this).is(':checked')){

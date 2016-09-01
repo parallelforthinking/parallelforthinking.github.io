@@ -89,8 +89,7 @@ interact('.draggable')
     target.setAttribute('data-y', y);
   }
 
-    console.log('we out here')
-$( document ).ready(function() {
+    $( document ).ready(function() {
   $('#archive').change(function(){
     if($(this).is(':checked')){
       $('#archive-panel').show();
@@ -181,6 +180,24 @@ $( document ).ready(function() {
   });
 });
 
+    $( document ).ready(function() {
+  $('#contributors-collapse').click(function(event){
+    $(event.target).hide()
+    $(".contributor-table").hide()
+    $(".contributors").height("40px")
+
+    setTimeout(function(){
+      console.log('we in here')
+      $("#contributors-panel").click(function(event){
+        $(".contributor-table").show()
+        $(".contributors").height("340px")
+        $("#contributors-collapse").show()
+        $("#contributors-panel").off()
+      })
+    }, 100)
+  });
+});
+
     jQuery(document).ready(function(){
   jQuery('.scrollbar-inner').scrollbar();
 });
@@ -198,7 +215,7 @@ $( document ).ready(function() {
     <div class="nav-input"> <input id="archive" checked=true  type="checkbox">Archive</input></div>
     <div class="nav-input"> <input id="information" checked=true  type="checkbox">Information</input></div>
     <div class="nav-input"> <input id="social-media" checked=true  type="checkbox">Social Media Feed</input></div>
-    <div class="nav-input"> <input id="contributors" checked="true "class="nav-input" type="checkbox">Contributors</input></div>
+    <div class="nav-input"> <input id="contributors" "class="nav-input" type="checkbox">Contributors</input></div>
     <div class="nav-input"> <input id="events" "class="nav-input" type="checkbox">Upcoming Events</input></div>
     <!-- <div class="nav-input"> <input id="live-stream" "class="nav-input"  checked="true" type="checkbox">Live Stream</input></div> -->
     <div class="nav-input"> <input id="branding" "class="nav-input"  checked="true" type="checkbox">Header</input></div>
