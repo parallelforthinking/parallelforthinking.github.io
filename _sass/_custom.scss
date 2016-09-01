@@ -29,12 +29,21 @@
   left: 14px;
 }
 
+.expand-button{
+  position: absolute;
+  cursor: pointer;
+  display: none;
+  top: 7.48px;
+  left: 33px;
+  font-size: 20px;
+}
+
 .collapse-button{
   position: absolute;
   cursor: pointer;
-  top: 7px;
+  top: 8px;
   left: 33px;
-  font-size: 23px;
+  font-size: 21px;
 }
 
 .credits {
