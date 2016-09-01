@@ -12,4 +12,18 @@ $( document ).ready(function() {
       $("#contributors-collapse").show()
     })
   });
+
+  $("#archive-collapse").click(function(event){
+    $(event.target).hide()
+    $(".archives-inner").hide()
+    $(".archives").height("40px")
+    $("#archive-expand").show()
+
+    $("#archive-expand").click(function(event){
+      $(".archives-inner").show()
+      $(".archives").height("420px")
+      $("#archive-expand").hide()
+      $("#archive-collapse").show()
+    })
+  });
 });
