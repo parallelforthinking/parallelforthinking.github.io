@@ -20,7 +20,7 @@
 .events {
   width: 284px;
   top: 200px;
-  z-index: 200;
+  z-index: 10;
   display: none; }
 
 .events-text {
@@ -30,7 +30,7 @@
   padding-bottom: 31px; }
 
 .contributors {
-  z-index: 100;
+  z-index: 10;
   display: none;
   top: 306px;
   left: 33%;
@@ -338,7 +338,7 @@ tbody:before {
   margin: 3%;
   margin-left: 7%;
   margin-right: 7%;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 19px; }
 
 .mobile-information-inner {
@@ -362,7 +362,7 @@ tbody:before {
 .social-link {
   display: block;
   margin-top: 4px;
-  font-size: 12px; }
+  font-size: 14px; }
 
 .social-links {
   position: absolute;
