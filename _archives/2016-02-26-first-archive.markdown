@@ -10,7 +10,7 @@ location_url: https://www.facebook.com/events/1666553183617033/
 
  Parallel _ For Thinking’s pre-launch event is an evening for the exchange of thoughts and ideas. We will be announcing our program schedule for 2016 as well as our residency in the Nicholas Building. 
 
-Parallel _ For Thinking is a platform coommitted to hosting events for promoting discussions concerning art, architecture, culture and thinking. Part exhibition, part panel discussion, all content and activities will be live-streamed, archived and shared online with an international audience. 
+Parallel _ For Thinking is a platform committed to hosting events for promoting discussions concerning art, architecture, culture and thinking. Part exhibition, part panel discussion, all content and activities will be live-streamed, archived and shared online with an international audience. 
 
 The night will coincide with the launch of our crowd-funding campaign which will provide us with the essential support to run future events. 
 
