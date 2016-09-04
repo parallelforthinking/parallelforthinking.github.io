@@ -1,0 +1,5 @@
+I---
+name: "20th Century Art Archives"
+link_url: "http://www.20th-century-art-archives.com/20thCenturyArtArchives/Page.aspx?p=34&ix=10006&pid=1&prcid=36&ppid=0"
+involvement:  "Vital Content Archive"
+---

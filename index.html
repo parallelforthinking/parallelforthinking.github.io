@@ -1,15 +1,888 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<div class="home">
-  {% include header.html %}
-  {% include information.html %}
-  {% include contributors.html %}
-  {% include facebook.html %}
-  {% include archive.html %}
-  {% include events.html %}
-  <!-- {% include live_stream.html %} -->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Parallel _ for Thinking</title>
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/">
+  <link rel="alternate" type="application/rss+xml" title="Parallel _ for Thinking" href="/feed.xml">
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.6/interact.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.10/jquery.scrollbar.js"></script>
+  <script>
+    var zIndex = 0;
+// this is used later in the resizing and gesture demos
+window.dragMoveListener = dragMoveListener;
+
+interact('.resize-drag')
+  .draggable({
+    onmove: window.dragMoveListener
+  })
+  .resizable({
+    preserveAspectRatio: false,
+    edges: { left: true, right: false, bottom: true, top: true }
+  })
+  .on('resizemove', function (event) {
+    var target = event.target,
+        x = (parseFloat(target.getAttribute('data-x')) || 0),
+        y = (parseFloat(target.getAttribute('data-y')) || 0);
+
+    // update the element's style
+    target.style.width  = event.rect.width + 'px';
+    target.style.height = event.rect.height + 'px';
+
+    var innerHeight = (event.rect.height - 40)+ 'px';
+    var width = event.rect.width + 'px';
+
+    $(target).children(".resize-drag-inner").height(innerHeight)
+    $(target).children(".resize-drag-inner").width(width)
+
+    // translate when resizing from top or left edges
+    x += event.deltaRect.left;
+    y += event.deltaRect.top;
+    target.style.webkitTransform = target.style.transform =
+      'translate(' + x + 'px,' + y + 'px)';
+
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  });
+
+interact('.draggable')
+  .draggable({
+    // enable inertial throwing
+    // enable autoScroll
+
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: function (event) {
+      var textEl = event.target.querySelector('p');
+      textEl && (textEl.textContent =
+        'moved a distance of '
+        + (Math.sqrt(event.dx * event.dx +
+                     event.dy * event.dy)|0) + 'px');
+    }
+  });
+
+  function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    zIndex++;
+    target.style.zIndex = zIndex;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+
+    $( document ).ready(function() {
+  $('#archive').change(function(){
+    if($(this).is(':checked')){
+      $('#archive-panel').show();
+    } else {
+      $('#archive-panel').hide();
+    }
+  });
+
+  $('#information').change(function(){
+    if($(this).is(':checked')){
+      $('#information-panel').show();
+    } else {
+      $('#information-panel').hide();
+    }
+  });
+
+  $('#social-media').change(function(){
+    if($(this).is(':checked')){
+      $('#social-media-panel').show();
+    } else {
+      $('#social-media-panel').hide();
+    }
+  });
+
+  $('#contributors').change(function(){
+    if($(this).is(':checked')){
+      $('#contributors-panel').show();
+    } else {
+      $('#contributors-panel').hide();
+    }
+  });
+  $('#live-stream').change(function(){
+    if($(this).is(':checked')){
+      $('#live-stream-panel').show();
+    } else {
+      $('#live-stream-panel').hide();
+    }
+  });
+  $('#branding').change(function(){
+    if($(this).is(':checked')){
+      $('#branding-panel').show();
+    } else {
+      $('#branding-panel').hide();
+    }
+  });
+
+  $('#events').change(function(){
+    if($(this).is(':checked')){
+      $('#events-panel').show();
+    } else {
+      $('#events-panel').hide();
+    }
+  });
+});
+
+    $(document).ready(function() {
+  $(".close-button").click(function(event) {
+    var id = event.target.id;
+
+    if (id == "archive-close") {
+      $("#archive-panel").hide();
+      $('#archive').prop('checked', false);
+    }
+    else if (id== "contributors-close"){
+      $("#contributors-panel").hide();
+      $('#contributors').prop('checked', false);
+    }
+    else if (id == "information-close") {
+      $("#information-panel").hide();
+      $('#information').prop('checked', false);
+    }
+    else if (id == "social-media-close") {
+      $("#social-media-panel").hide();
+      $('#social-media').prop('checked', false);
+    }
+    else if (id == "events-close") {
+      $("#events-panel").hide();
+      $('#events').prop('checked', false);
+    }
+    else if (id == "live-stream-close") {
+      $("#live-stream-panel").hide();
+      $('#live-stream').prop('checked', false);
+    }
+    else if (id == "branding-close") {
+      $("#branding-panel").hide();
+      $('#branding').prop('checked', false);
+    }
+  });
+});
+
+    $( document ).ready(function() {
+  $("#contributors-collapse").click(function(event){
+    $(event.target).hide()
+    $(".contributor-table").hide()
+
+    var contributorsHeight = $(".contributors").height()
+    $(".contributors").height("40px")
+    $("#contributors-expand").show()
+
+    $("#contributors-expand").click(function(event){
+      $(".contributor-table").show()
+      $(".contributors").height(contributorsHeight)
+      $("#contributors-expand").hide()
+      $("#contributors-collapse").show()
+    })
+  });
+
+  $("#archive-collapse").click(function(event){
+    $(event.target).hide()
+    $(".archives-inner").hide()
+    var archiveHeight = $(".archives").height()
+    $(".archives").height("40px")
+    $("#archive-expand").show()
+
+    $("#archive-expand").click(function(event){
+      $(".archives-inner").show()
+      $(".archives").height(archiveHeight)
+      $("#archive-expand").hide()
+      $("#archive-collapse").show()
+    })
+  });
+
+  $("#information-collapse").click(function(event){
+    $(event.target).hide()
+    $(".information-inner").hide()
+
+    var informationHeight = $(".information").height()
+    $(".information").height("40px")
+    $("#information-expand").show()
+
+    $("#information-expand").click(function(event){
+      $(".information-inner").show()
+      $(".information").height(informationHeight)
+      $("#information-expand").hide()
+      $("#information-collapse").show()
+    })
+  });
+
+  $("#events-collapse").click(function(event){
+    $(event.target).hide()
+    $(".events-text").hide()
+
+    $(".events").height("40px")
+    $("#events-expand").show()
+
+    $("#events-expand").click(function(event){
+      $(".events-text").show()
+      $(".events").height("113px")
+      $("#events-expand").hide()
+      $("#events-collapse").show()
+    })
+  });
+
+  $("#social-media-collapse").click(function(event){
+    $(event.target).hide()
+    $(".social-media-container").hide()
+
+    $(".social-media").height("40px")
+    $("#social-media-expand").show()
+
+    $("#social-media-expand").click(function(event){
+      $(".social-media-container").show()
+      $(".social-media").height("471px")
+      $("#social-media-expand").hide()
+      $("#social-media-collapse").show()
+    })
+  });
+});
+
+    jQuery(document).ready(function(){
+  jQuery('.scrollbar-inner').scrollbar();
+});
+
+  </script>
+</head>
+
+<div id="fb-root"></div>
+
+  <body>
+
+    <div class="hidden-xs">
+      <div class="nav-container">
+  <div class="nav">
+    <div class="nav-input"> <input id="archive" checked=true  type="checkbox">Archive</input></div>
+    <div class="nav-input"> <input id="information" checked=true  type="checkbox">Information</input></div>
+    <div class="nav-input"> <input id="social-media" checked=true  type="checkbox">Social Media Feed</input></div>
+    <div class="nav-input"> <input id="contributors" "class="nav-input" type="checkbox">Contributors</input></div>
+    <div class="nav-input"> <input id="events" "class="nav-input" type="checkbox">Upcoming Events</input></div>
+    <div class="nav-input"> <input id="branding" "class="nav-input"  checked="true" type="checkbox">Header</input></div>
+    <div class="nav-input"> <input id="live-stream" "class="nav-input" disabled="disabled" type="checkbox">Live Stream</input></div>
+  </div>
+
+</div>
+
+      <div class="wrapper">
+        <div class="home">
+  <div id="branding-panel">
+  <div class="draggable pft-header">
+    <div id="branding-close" class="close-button"> x </div>
+    <img class="pft-logo" src="/assets/pft-logo.png"/>
+    <span class="pft-header-text">
+      Parallel <span id="header-underscore" class="blue">_</span> for Thinking
+    </span>
+  </div>
+
+</div>
+
+  <div id="information-panel" class="resize-drag information ">
+
+  <div id="information-close" class="close-button"> x </div>
+  <div id="information-collapse" class="collapse-button"> - </div>
+  <div id="information-expand" class="expand-button"> + </div>
+  <div class="window-heading">Information</div>
+  <div class="resize-drag-inner information-inner scrollbar-inner">
+    <div class="information-text">
+      <p>
+        Parallel _ For Thinking is a platform committed to hosting and transmitting events around thinking and Culture, in parallel to existing networks, industries and institutions.
+      </p>
+
+      <p>
+        Parallel _ For Thinking attempts to create a community; a platform for sourcing, promoting and distributing thinking and Culture associated within Architecture, Arts, Philosophy, Fashion, Literature and General Culture.
+      </p>
+
+      <p>
+        Crucial to the Parallel _ For Thinking platform is the creation of the Parallel Space For Thinking, a six month residency in the Nicholas Building in Melbourne’s CBD. To create this community our platform emphasises two-way format events such as discussions whereby the speaker and the audience are constantly exchanging thinking, unlike the one-way lecture format whereby the audience merely listens.
+      </p>
+
+      <p>
+        Over this six month period The Parallel Space For Thinking will generate, collate and archive content physically and digitally. This will be done through various events including discussions, exhibitions, workshops and screenings, all of which will be live-streamed directly to the Parallel Website For Thinking.
+      </p>
+
+      <p>
+        The intention is to create a space that is a catalyst for a new culture. This culture is committed to establishing an international dialogue and discourse through sharing ideas and discussion across the world.
+      </p>
+
+      <p>
+        The role of Parallel _ For Thinking is to provide access to material and ideas previously limited to small groups of people, eliminating a minority like effect typically associated with thinking. This will help us create a newer, larger culture that sees thinking as accessible and interesting.
+      </p>
+
+      <p>
+        Parallel _ For Thinking will be supported by a network of contributors, collaborators, sponsors and donors. Together, we will be committed to establishing a strong community for transmitting and communicating thinking across the boundaries and constraints of location, language and socio-economic positions.    </div>
+      </p>
+    </div>
+    <!-- <div> -->
+  <!-- <div class="information__sub-heading">Contact</div> -->
+  <!-- <div class="information__email">info@pft.website</div> -->
+  <!-- </div> -->
+  <!-- <div> -->
+  <!-- <div class="information__sub-heading">Social Networks</div> -->
+  <!-- <div class="information__social-media">Facebook</div> -->
+  <!-- <div class="information__social-media">Twitter</div> -->
+  <!-- <div class="information__social-media">Instagram</div> -->
+  <!-- </div> -->
+  <!-- <div> -->
+  <!-- <div class="information__sub-heading">Newsletter</div> -->
+  <!-- <div class="information__newsletter-info"> -->
+  <!-- To subscribe to our newsletter please enter your email address below: -->
+  <!-- </div> -->
+  <!-- <input class="information__newsletter-input"> -->
+  <!-- </input> -->
+  <!-- </div> -->
+  </div>
+</div>
+
+  <div id="contributors-panel" class="resize-drag contributors">
+
+<div id="contributors-close" class="close-button"> x </div>
+<div id="contributors-collapse" class="collapse-button"> - </div>
+<div id="contributors-expand" class="expand-button"> + </div>
+<div class="window-heading">Contributors</div>
+
+<div class="contributor-table resize-drag-inner scrollbar-inner">
+  <table>
+    <thead>
+      <tr>
+        <th class="contributor-heading">Name</th>
+        <th class="contributor-heading">Involvement</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://samhains.com/">Sam Hains</a></td>
+        <td>Digital Space Coordinator</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Aaron_Swartz">Aaron Schwartz</a></td>
+        <td>Significant Historical Mentor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Alexei Haddad</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.anycorp.com/">ANYCORP</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.artdes.monash.edu.au/people/ari-seligmann.html">Ari Seligmann</a></td>
+        <td>Mentor / Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Art_%26_Project">Art + Project Bulletin</a></td>
+        <td>Vital Content Archive</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.cca.qc.ca/en/about">Canadian Centre For Architecture</a></td>
+        <td>Supporter</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.lyonsarch.com.au/carey-lyon/">Carey Lyon</a></td>
+        <td>Major Supporter / Mentor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Congr%C3%A8s_International_d%27Architecture_Moderne">CIAM</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://www.instagram.com/url.cv/">Colby Vexler</a></td>
+        <td>Director / Founder</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Coll%C3%A8ge_international_de_philosophie">Collège international de philosophie</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Dan McKenna</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/De_Stijl">De Stijl</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://aprioriandafter.com.au/">Dennis Prior</a></td>
+        <td>Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://msd.unimelb.edu.au/people/donald-bates">Donald Bates</a></td>
+        <td>Mentor / Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Experiments_in_Art_and_Technology">E.A.T</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Diller_Scofidio_%2B_Renfro">Elizabeth Diller</a></td>
+        <td>Significant Historical Mentor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://www.accaonline.org.au/sites/default/files/John%20Nixon%20Thesis%20screen.pdf">EPW (experimental Painting Workshop)</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Frank Burridge</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://i-d.vice.com/en_au/article/designers-ru-kwok-and-georgia-fraser-are-best-friends-who-will-sacrifice-anything-to-get-it-right">Georgia Fraser</a></td>
+        <td>Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://catalogue.nla.gov.au/Record/193428">Half Time Club</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://magicjohnston.com/">Hugo Atkins</a></td>
+        <td>Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://huntedandgathered.com.au/">Hunted + Gathered</a></td>
+        <td>Supported By</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Institute_for_Architecture_and_Urban_Studies">Institute for Architecture and Urban Studies</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Jack May</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://www.instagram.com/real_profile_">James Fletcher</a></td>
+        <td>Founder / Director</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">James Harbard</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">James Taylor</a></td>
+        <td>Physical Space Coordinator / Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://nymag.com/author/Jerry%20Saltz/">Jerry Saltz</a></td>
+        <td>Social Media Interaction</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Joseph_Kosuth">Joseph Kosuth</a></td>
+        <td>Significant Historical Mentor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://elenbergfraser.com/#!/staff/karen-mcwilliam">Karen McWilliam</a></td>
+        <td>Major Supporter</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://www.instagram.com/kiribirii/">Kiri-Una Brito Meumann</a></td>
+        <td>Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Laura Banfield</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.leftmatrix.com/">Left Matrix</a></td>
+        <td>Vital Content Archive</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.lucyguerininc.com/performer/lilian-steiner/">Lilian Steiner</a></td>
+        <td>Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.fehilycontemporary.com.au/">Lisa Fehily</a></td>
+        <td>Mentor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Lloyd Bradbury</a></td>
+        <td>Friend of</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Marcel_Duchamp">Marcel Duchamp</a></td>
+        <td>Significant Historical Mentor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Matthew Senkowycz</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://www.media.mit.edu/about/mission-history">Media Lab MIT</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Metabolism_(architecture)">Metabolists</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Mia Fleming</a></td>
+        <td>Friend of</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.midorihasuike.com/">Midori Hasuike</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Naqeeb Popal</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://negativepress.com.au/">Negative Press</a></td>
+        <td>Supporter</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Net.art">Net.Art</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.newinc.org/">NEW INC</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.openculture.com/">Open Culture</a></td>
+        <td>Vital Content Archive</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Oppositions">Oppositions</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://oscarschwartz.me/">Oscar Schwartz</a></td>
+        <td>Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.eisenmanarchitects.com/firm-profile.html#eisenman">Peter Eisenman</a></td>
+        <td>Significant Historical Mentor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="instagram.com/pricilla_irl">Pricilla Heung</a></td>
+        <td>Director / Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://www.printedmatter.org/">PRINTED Matter</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.quondam.com/">Quondam</a></td>
+        <td>Vital Content Archive</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://oma.eu/partners/rem-koolhaas">Rem Koolhaas</a></td>
+        <td>Significant Historical Mentor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://rhizome.org/">Rhizome.org</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Ruth Bain</a></td>
+        <td>Mentor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.ryoji.co.jp/">Ryoji Suzuki</a></td>
+        <td>Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.samplebrew.com.au/">Sample Brew</a></td>
+        <td>Supported By</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://www.ngv.vic.gov.au/author/sbentley/">Serena Bentley</a></td>
+        <td>Guest Speaker</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Soci%C3%A9t%C3%A9_Anonyme_(art)">Société Anonyme</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://socks-studio.com/">Socks-Studio</a></td>
+        <td>Vital Content Archive</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="">Steav Nissen</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://storefrontnews.org/">Storefront for Art and Architecture</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Team_10">Team 10</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Situationist_International">The Situationist International</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://sharkmouse.org/">Tom Morgan</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://www.instagram.com/thmsjsphvvnpndrgst/">Tom Pedergast</a></td>
+        <td>Event Contributor</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://trove.nla.gov.au/work/11311564?selectedversion=NBD943676">Transitions Magazine</a></td>
+        <td></td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://ubuweb.com/">UBU WEB</a></td>
+        <td>Vital Content Archive</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="http://www.wheelercentre.com/">Wheeler Centre for Ideas</a></td>
+        <td>Significant Historical Precedent</td>
+      </tr>
+      
+      <tr>
+        <td><a class="contributor-link" target="_blank" href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></td>
+        <td>Vital Content Archive</td>
+      </tr>
+      
+    </tbody>
+
+  </table>
+</div>
+</div>
+
+    <div id="social-media-panel" class="draggable social-media">
+  <div id="social-media-close" class="close-button"> x </div>
+
+  <div id="social-media-collapse" class="collapse-button"> - </div>
+  <div id="social-media-expand" class="expand-button"> + </div>
+  <div class="window-heading">Social Media Feed</div>
+  <div class="social-media-container"> 
+    <div class="facebook-iframe"> 
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FParallelForThinking&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1660150024250174" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
+  </div>
+  </div>
+
+
+  <div id="archive-panel" class="archives resize-drag ">
+  <div id="archive-close" class="close-button"> x </div>
+  <div id="archive-collapse" class="collapse-button"> - </div>
+  <div id="archive-expand" class="expand-button"> + </div>
+  <div class="window-heading">Archive</div>
+
+  <div class="archives-inner resize-drag-inner scrollbar-inner">
+    <ul class="archive-list">
+      
+      <div class="archive-header">
+        <div>Panel_Conversation_001_Down Time</div>
+      </div>
+      <!-- <iframe width="300" class="youtube-video" src="https://www.youtube-nocookie.com/embed/http://i36.photobucket.com/albums/e37/parallelforthinking/DownTime_zpsjzw39vim.jpg?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
+      <img class="temp-img" src="http://i36.photobucket.com/albums/e37/parallelforthinking/DownTime_zpsjzw39vim.jpg"/>
+      <div class="archive-date">2016-07-12 00:00:00 +0000</div>
+      <a target="_blank" class="archive-link" href="https://www.facebook.com/events/185070881895225/">Parallel Space For Thinking</a>
+      <div class="archive-description"><p>DOWNTIME is considered a period of time when one is not working or active. Although often cast in negative light, DOWNTIME can generate positive consequences rarely discussed in relation to profit-centred culture and industry.</p>
+
+<p>We have been busy constructing the Parallel Space for Thinking in The Nicholas Building, placing us in our own period of DOWNTIME. This event will be non-physical and live-streamed from our construction site</p>
+
+</div>
+      <div class="separator"></div>
+      
+      <div class="archive-header">
+        <div>Table_Conversation_001_Support</div>
+      </div>
+      <!-- <iframe width="300" class="youtube-video" src="https://www.youtube-nocookie.com/embed/http://i36.photobucket.com/albums/e37/parallelforthinking/TABLE-CONVERSATION-SCREENSHOT_zpse1ub7p4b.jpg?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
+      <img class="temp-img" src="http://i36.photobucket.com/albums/e37/parallelforthinking/TABLE-CONVERSATION-SCREENSHOT_zpse1ub7p4b.jpg"/>
+      <div class="archive-date">2016-03-22 19:00:00 +0000</div>
+      <a target="_blank" class="archive-link" href="https://www.facebook.com/events/1694653147418028/">Parallel Space For Thinking</a>
+      <div class="archive-description"><p>As members of our community we invite you to email info@p-ft.website with your questions, commentary or suggestions regarding Parallel _ For Thinking’s intentions, format or anything else. Your emails will set the agenda for this table conversation.</p>
+
+<p>This event will be hosted entirely online, live-streamed through our website www.p-ft.website. Your emails will be read and discussed anonymously by the Parallel _ For Thinking guests at the table.</p>
+
+<p>The event will invovle with table guests discussing a number of ideas centred around the theme of bringing different thinking together assisted by your emails.</p>
+</div>
+      <div class="separator"></div>
+      
+      <div class="archive-header">
+        <div>Pre Launch Event: An Evening for the Exchange of Thinking</div>
+      </div>
+      <!-- <iframe width="300" class="youtube-video" src="https://www.youtube-nocookie.com/embed/http://i36.photobucket.com/albums/e37/parallelforthinking/PRELAUNCH-SCREENSHOT_zps9o7kexyr.jpg?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
+      <img class="temp-img" src="http://i36.photobucket.com/albums/e37/parallelforthinking/PRELAUNCH-SCREENSHOT_zps9o7kexyr.jpg"/>
+      <div class="archive-date">2016-02-26 00:00:00 +0000</div>
+      <a target="_blank" class="archive-link" href="https://www.facebook.com/events/1666553183617033/">Hunted + Gathered</a>
+      <div class="archive-description"><p>Parallel _ For Thinking’s pre-launch event is an evening for the exchange of thoughts and ideas. We will be announcing our program schedule for 2016 as well as our residency in the Nicholas Building.</p>
+
+<p>Parallel _ For Thinking is a platform committed to hosting events for promoting discussions concerning art, architecture, culture and thinking. Part exhibition, part panel discussion, all content and activities will be live-streamed, archived and shared online with an international audience.</p>
+
+<p>The night will coincide with the launch of our crowd-funding campaign which will provide us with the essential support to run future events.</p>
+
+</div>
+      <div class="separator"></div>
+      
+    </ul>
+  </div>
+</div>
+
+  <div id="events-panel" class="events white-box draggable">
+  <div id="events-close" class="close-button"> x </div>
+  <div id="events-collapse" class="collapse-button"> - </div>
+  <div id="events-expand" class="expand-button"> + </div>
+  <div class="window-heading">Upcoming Events</div>
+  <div class="events-text">
+    Coming Soon ...
+  </div>
+</div>
+
+  <!-- <div id="live-stream-panel" class="live-stream white-box draggable">
+  <div id="live-stream-close" class="close-button"> x </div>
+  <div class="window-heading">Live Stream</div>
+  <div class="live-stream-video">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7l5EVd3d4Wk?controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+ -->
 
 </div>
 <!-- <span class="credits"> Website by <a target="_blank" href="http://www.samhains.com" >Sam Hains</a> -->
+
+      </div>
+    </div>
+
+    <div class="hidden-sm hidden-md hidden-lg hidden-xl">
+  <div class="white-box mobile-pft-header">
+    <img class="mobile-pft-logo" src="/assets/pft-logo.png"/>
+    Parallel <span class="blue">_</span> for Thinking
+  </div>
+
+  <div class="white-box mobile-information scrollbar-inner">
+    <div class="mobile-information-inner">
+      <p>
+        Parallel _ For Thinking is a platform committed to hosting and transmitting events around thinking and Culture, in parallel to existing networks, industries and institutions.
+      </p>
+
+      <p>
+        Parallel _ For Thinking attempts to create a community; a platform for sourcing, promoting and distributing thinking and Culture associated within Architecture, Arts, Philosophy, Fashion, Literature and General Culture.
+      </p>
+
+      <p>
+        Crucial to the Parallel _ For Thinking platform is the creation of the Parallel Space For Thinking, a six month residency in the Nicholas Building in Melbourne’s CBD. To create this community our platform emphasises two-way format events such as discussions whereby the speaker and the audience are constantly exchanging thinking, unlike the one-way lecture format whereby the audience merely listens.
+      </p>
+
+      <p>
+        Over this six month period The Parallel Space For Thinking will generate, collate and archive content physically and digitally. This will be done through various events including discussions, exhibitions, workshops and screenings, all of which will be live-streamed directly to the Parallel Website For Thinking.
+      </p>
+
+      <p>
+        The intention is to create a space that is a catalyst for a new culture. This culture is committed to establishing an international dialogue and discourse through sharing ideas and discussion across the world.
+      </p>
+
+      <p>
+        The role of Parallel _ For Thinking is to provide access to material and ideas previously limited to small groups of people, eliminating a minority like effect typically associated with thinking. This will help us create a newer, larger culture that sees thinking as accessible and interesting.
+      </p>
+
+      <p>
+        Parallel _ For Thinking will be supported by a network of contributors, collaborators, sponsors and donors. Together, we will be committed to establishing a strong community for transmitting and communicating thinking across the boundaries and constraints of location, language and socio-economic positions.    </div>
+      </p>
+  </div>
+
+  <div class="white-box watch-now">
+    <a href="" class="blue-link watch-now-link" target="_blank">WATCH NOW</a>
+  </div>
+
+  <div class="social-links">
+    <a class="social-link blue-link" href="https://www.facebook.com/ParallelForThinking" blank="_target">Facebook</a>
+    <a class="social-link blue-link" href="https://www.instagram.com/p_ft_/" blank="_target">Instagram</a>
+    <a class="social-link blue-link" href="https://twitter.com/p_ft_" blank="_target">Twitter</a>
+  </div>
+</div>
+
+
+  </body>
+
+</html>
