@@ -19,3 +19,12 @@ collections:
 - events
 - archives
 - contributors
+
+defaults:
+  - scope:
+        path: ""
+        type: contributors
+    values:
+        name: ""
+        link_url: ""
+        involvement: ""
