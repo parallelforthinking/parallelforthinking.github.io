@@ -6,10 +6,6 @@ interact('.resize-drag')
   .draggable({
     onmove: window.dragMoveListener
   })
-  .resizable({
-    preserveAspectRatio: false,
-    edges: { left: true, right: false, bottom: true, top: true }
-  })
   .on('resizemove', function (event) {
     var target = event.target,
         x = (parseFloat(target.getAttribute('data-x')) || 0),
